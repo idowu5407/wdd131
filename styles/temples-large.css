@@ -1,0 +1,19 @@
+/* Larger screen styles */
+nav ul {
+    flex-direction: row;
+  }
+  
+  #navMenu {
+    display: flex;
+  }
+  
+  #hamburger {
+    display: none;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
