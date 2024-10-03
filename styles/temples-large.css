@@ -1,19 +1,15 @@
-/* Larger screen styles */
-nav ul {
-    flex-direction: row;
-  }
-  
-  #navMenu {
-    display: flex;
-  }
-  
-  #hamburger {
-    display: none;
-  }
-  
+/* Larger Screen Layout */
+@media (min-width: 768px) {
   main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
+
+  nav ul {
+      justify-content: flex-start;
+  }
+
+  nav ul li {
+      margin-right: 1em;
+  }
+}

@@ -1,96 +1,109 @@
-/* Import Google Fonts */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Basic styles for the navigation */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+}
+
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Main Content */
+main {
+  max-width: 90%;
+  margin: 1em auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+}
+
+figcaption {
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* Mobile view - display hamburger */
+@media (max-width: 767px) {
   nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  nav ul li {
-    margin: 10px 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    color: #ddd;
-  }
-  
-  /* Hide the menu on mobile */
-  #navMenu {
-    display: none;
-  }
-  
-  /* Show the hamburger button on mobile */
-  #hamburger {
-    display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Main content styles */
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  figure {
-    margin: 10px 0;
-  }
-  
-  img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Footer styles */
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  /* Media query for larger screens */
-  @media (min-width: 769px) {
-    nav ul {
-      flex-direction: row;
-    }
-  
-    #navMenu {
-      display: flex;
-    }
-  
-    #hamburger {
       display: none;
-    }
-  
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
   }
-  
+
+  nav ul.open {
+      display: flex;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
