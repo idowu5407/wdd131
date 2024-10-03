@@ -1,8 +1,4 @@
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* General Styles */
+/* Mobile-First Design */
 body, html {
   margin: 0;
   padding: 0;
@@ -10,100 +6,84 @@ body, html {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Navigation styles */
+/* Header */
 header {
-  background-color: #333;
+  background-color: #4B0082;
   color: white;
-  padding: 1em;
-  text-align: center;
+  padding: 0.5px;
+  position: relative;
 }
 
+/* Navigation Menu */
 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
   margin: 0;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+}
+
+nav ul.open {
+  display: flex;
+}
+
+nav ul li {
+  text-align: center;
+  padding: 1em 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   padding: 0.5em;
+  display: block;
 }
 
 nav a:hover {
-  background-color: #555;
-  border-radius: 5px;
+  background-color: #6A0DAD;
 }
 
-/* Main Content */
+/* Hamburger Menu */
+.hamburger {
+  display: block;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+}
+
+/* Main Content - Mobile View */
 main {
   max-width: 90%;
   margin: 1em auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
-}
-
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 1.5em;
+  text-align: center;
 }
 
 img {
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 figcaption {
-  margin-top: 0.5em;
   font-weight: bold;
+  margin-top: 0.5em;
 }
 
 /* Footer */
 footer {
-  background-color: #333;
+  background-color: #4B0082;
   color: white;
   text-align: center;
   padding: 1em;
-}
-
-footer p {
-  margin: 0.5em 0;
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 2em;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
-/* Mobile view - display hamburger */
-@media (max-width: 767px) {
-  nav ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 50px;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-      text-align: center;
-  }
-
-  nav ul.open {
-      display: flex;
-  }
-
-  .hamburger {
-      display: block;
-  }
+  font-size: 0.9em;
 }

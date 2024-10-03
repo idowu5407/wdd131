@@ -1,15 +1,44 @@
 /* Larger Screen Layout */
 @media (min-width: 768px) {
-  main {
-      max-width: 1200px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    /* Main Content for Larger Screens */
+    main {
+        max-width: 1200px;
+        margin: 2em auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        gap: 1.5em;
+        text-align: center;
+    }
 
-  nav ul {
-      justify-content: flex-start;
-  }
+    /* Centering the h1 main*/
+    main h1 {
+        text-align: center;
+        grid-column: 1 / -1;
+        font-size: 1.5em;   
+    }
 
-  nav ul li {
-      margin-right: 1em;
-  }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;   
+    }
+    
+    /* Navigation Menu - Display for Larger Screens */
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+
+    nav ul li {
+        padding: 0;
+        margin-right: 1em;
+   
+    }
+
+    /* Hide Hamburger in Larger View */
+    .hamburger {
+        display: none;
+    }
 }
