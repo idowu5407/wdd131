@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="author" content="Idowu Sunday">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/theatre.webp" media="(min-width: 768px)">
+                <img src="images/nigeria-mobile.webp" alt="Nigeria National Theatre" class="hero-img">
+            </picture>
+        </section>
+        <div class="container">
+            <div class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 923,769 sq km</li>
+                    <li><strong>Population:</strong> 213,401,323</li>
+                    <li><strong>Capital:</strong> Abuja</li>
+                    <li><strong>Languages:</strong> English</li>
+                    <li><strong>Currency:</strong> Nigerian Naira</li>
+                    <li><strong>Time Zone:</strong> UTC+1</li>
+                    <li><strong>Calling Code:</strong> +234</li>
+                    <li><strong>Internet TLD:</strong> .ng</li>
+                </ul>
+            </div>
+            <div class="weather">
+                <h2>Weather <span class="weather-icon">&#x2601;</span></h2>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temperature">10</span> °C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span>🌴Idowu Sunday | Ogun State |  Nigeria</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
