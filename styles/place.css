@@ -6,7 +6,7 @@
   --font-size-small: 14px;
   --font-size-large: 18px;
   --spacing: 1.5em;
-  --font-family: 'Roboto', Sans-serif; 
+  --font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -38,7 +38,7 @@ ul {
 }
 
 .h1 {
-  background-color: #000000;
+  background-color: var(--secondary-color);
 }
 
 .hero-img {
