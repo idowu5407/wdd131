@@ -6,8 +6,7 @@
   --font-size-small: 14px;
   --font-size-large: 18px;
   --spacing: 1.5em;
-  --font-family: 'Roboto', sans-serif;
-  
+  --font-family: 'Roboto', Sans-serif; 
 }
 
 * {
@@ -17,20 +16,15 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
   padding: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: var(--primary-color);
-  padding: 10px;
-}
 
-h2 {
-  color: var(--background-color);
+h3 {
+  color: var(--text-color);
 }
 
 ul {
@@ -38,12 +32,13 @@ ul {
 }
 
 .hero {
-  margin-bottom: var(--spacing);
-  
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-color);  
 }
 
-.hero h1 {
-  font-size: 2em;
+.h1 {
+  background-color: #000000;
 }
 
 .hero-img {
@@ -64,7 +59,7 @@ ul {
   font-size: var(--font-size-small);
 }
 
-.weather h2 {
+.weather h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,20 +83,14 @@ footer {
 
   h1 {
       font-size: 3em;
-  }
-
-  h2 {
-    boer
+  } 
   
-    
-  }
 
   .container {
     display: flex;
     align-items: flex-end;
-   
-    
   }
+   
   .data {
     position: absolute;
     align-self: flex-start;
@@ -128,7 +117,7 @@ footer {
       margin-left: 10px;
   }
 
-  .weather h2::after {
+  .weather h3::after {
       content: '☁️'; /* Pseudo element for large view weather icon */
       margin-left: 10px;
       font-size: 1.5em;
