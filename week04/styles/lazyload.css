@@ -1,0 +1,21 @@
+main, h1, footer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fade 10s forwards;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
