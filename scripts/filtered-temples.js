@@ -74,7 +74,7 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg," 
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg" 
   },
   {
     name: "Atlanta Georgia Temple",
@@ -82,7 +82,7 @@ const temples = [
     dedicated: "1983, June, 1",
     area:  "34500",
     imageUrl:
-    "https://churchofjesuschristtemples.org/assets/img/temples/atlanta-georgia-temple/atlanta-georgia-temple-13940-main.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/atlanta-georgia-temple/atlanta-georgia-temple-13940-main.jpg" 
   },
   {
     name: "Denver Colorado Temple",
@@ -112,14 +112,13 @@ function displayTemples(filteredTemples) {
 
     templeCard.innerHTML = `
       <figure>
-        <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy">
-        <figcaption>${temple.name}</figcaption>
+        <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy" width="400" height="250">
+        <figcaption><strong>${temple.name}</strong></figcaption>
       </figure>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area} sq ft</p>
+      <p><strong>Location:</strong>${temple.location}</p>
+      <p><strong>Dedicated:</strong>${temple.dedicated}</p>
+      <p><strong>Area:</strong>${temple.area} sq ft</p>
     `;
-
     main.appendChild(templeCard);
   });
 }
