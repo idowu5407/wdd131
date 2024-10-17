@@ -123,33 +123,63 @@ function displayTemples(filteredTemples) {
   });
 }
 
-// Filtering functions
-function filterOldTemples() {
-  const oldTemples = temples.filter(temple => temple.dedicated < 1900);
-  displayTemples(oldTemples);
+// Function to display temples based on filter criteria
+function displayTemples(filteredTemples) {
+  const mainElement = document.querySelector('main');
+  mainElement.innerHTML = ''; // Clear the existing content
+
+  filteredTemples.forEach(temple => {
+    const templeCard = document.createElement('section');
+    templeCard.classList.add('temple-card');
+
+    templeCard.innerHTML = `
+      <figure>
+        <img src="${temple.imageUrl}" alt="${temple.name}" loading="lazy" width="400" height"250">
+        <figcaption>${temple.name}</figcaption>
+      </figure>
+      <p><strong>Location:</strong> ${temple.location}</p>
+      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+      <p><strong>Area:</strong> ${temple.area} sq. ft.</p>
+    `;
+
+    mainElement.appendChild(templeCard);
+  });
 }
 
-function filterNewTemples() {
-  const newTemples = temples.filter(temple => temple.dedicated > 2000);
-  displayTemples(newTemples);
+// Function to filter temples by condition
+function filterTemples(condition) {
+  let filteredTemples;
+
+  switch (condition) {
+    case 'old':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated) < new Date('1900-01-01'));
+      break;
+    case 'new':
+      filteredTemples = temples.filter(temple => new Date(temple.dedicated) > new Date('2000-01-01'));
+      break;
+    case 'large':
+      filteredTemples = temples.filter(temple => temple.area > 90000);
+      break;
+    case 'small':
+      filteredTemples = temples.filter(temple => temple.area < 10000);
+      break;
+    default:
+      filteredTemples = temples; // 'home' or any other condition shows all temples
+  }
+
+  displayTemples(filteredTemples);
 }
 
-function filterLargeTemples() {
-  const largeTemples = temples.filter(temple => temple.area > 90000);
-  displayTemples(largeTemples);
-}
+// Add event listeners to the navigation links
+document.querySelector('nav').addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    event.preventDefault(); // Prevent the default link behavior
+    const filter = event.target.getAttribute('href').substring(1); // Get the filter type from href
+    filterTemples(filter);
+  }
+});
 
-function filterSmallTemples() {
-  const smallTemples = temples.filter(temple => temple.area < 10000);
-  displayTemples(smallTemples);
-}
-
-// Event listeners for navigation
-document.querySelector('nav a[href="#home"]').addEventListener('click', () => displayTemples(temples));
-document.querySelector('nav a[href="#old"]').addEventListener('click', filterOldTemples);
-document.querySelector('nav a[href="#new"]').addEventListener('click', filterNewTemples);
-document.querySelector('nav a[href="#large"]').addEventListener('click', filterLargeTemples);
-document.querySelector('nav a[href="#small"]').addEventListener('click', filterSmallTemples);
-
-// Display all temples by default on page load
-displayTemples(temples);
+// Initialize the page by displaying all temples on load
+window.onload = () => {
+  filterTemples('home'); // Show all temples initially
+};
