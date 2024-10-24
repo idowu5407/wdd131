@@ -10,7 +10,7 @@ function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     const reviewData = {};
     params.forEach((value, key) => {
-        reviewData[key] = value; // Store each parameter in an object
+        reviewData[key] = value; 
     });
     return reviewData;
 }
