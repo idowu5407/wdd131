@@ -12,3 +12,10 @@ main {
     max-width : 650px;
     margin :  auto;
 }
+
+a {
+    text-decoration : none;
+ }
+.go-back-button:hover {
+    background-color : #7977ee;
+ }

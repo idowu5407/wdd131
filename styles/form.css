@@ -39,12 +39,7 @@ input[type="submit"] {
     cursor : pointer;
     width : 100%;
 }
-a {
-    text-decoration : none;
- }
-.go-back-button:hover {
-    background-color : #7977ee;
- }
+
 input[type="submit"]:hover {
     background-color : #45a049;
 }
