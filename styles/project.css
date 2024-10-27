@@ -1,0 +1,94 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+header nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons input {
+    padding: 0.5rem;
+    margin-right: 1rem;
+}
+
+.cart-btn {
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.gallery-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#chat-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .header-icons input {
+        display: none;
+    }
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+}
