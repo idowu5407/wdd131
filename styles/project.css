@@ -24,7 +24,7 @@ header h1 {
     margin: 0; 
     color: #25D366;
 } 
-.header-top { 
+.header-log { 
     display: flex; 
     width: 100%; 
     justify-content: space-between; 
@@ -49,18 +49,17 @@ nav a:hover {
         align-items: center; 
         gap: 10px; 
 }
-.hamburger { 
-    display: none; 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-} 
-/*.hamburger div { 
-    width: 25px; 
-    height: 3px; 
-    background-color: white; 
-    margin: 4px;
-}*/
-
+.hamburger {
+    display: none;
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
 .hero {
     position: relative;
     height: 50vh;
@@ -166,8 +165,5 @@ footer {
     .hamburger { 
         display: block; 
     } 
-    .header-top 
-    .hamburger.active + nav { 
-        display: flex; 
-    }
+    
 }
