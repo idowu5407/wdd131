@@ -1,29 +1,20 @@
-// Toggle Mobile Menu
+ // Toggle Mobile Menu
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
-}
+  if (nav.classList.contains('active')) { hamburger.textContent = '✖'; 
+  } 
+    else { hamburger.textContent = '☰'; 
+  } }
 
+  // DOM Content Loaded Event
+  document.addEventListener('DOMContentLoaded', () => {
+    // Set the current year
+    const currentYear = new Date().getFullYear();
+    document.getElementById("currentyear").textContent = currentYear;
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Set the current year
-  var currentYear = new Date().getFullYear();
-  document.getElementById("currentyear").textContent = currentYear;
-
-  // Set the last modified date
-  var lastModified = document.lastModified;
-  document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
-
-  // Hamburger menu functionality
-const nav = document.querySelector('nav ul');
-const hamburger = document.createElement('button');
-hamburger.innerText = '☰';  // Hamburger icon
-hamburger.classList.add('hamburger');
-document.querySelector('header').prepend(hamburger);
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    hamburger.innerText = hamburger.innerText === '☰' ? 'X' : '☰'; // Toggle icon
-});
+    // Set the last modified date
+    const lastModified = document.lastModified;
+    document.getElementById("lastModified").textContent = "Last Modified: " + lastModified;
 
 });
 
@@ -32,12 +23,12 @@ let currentImageIndex = 0;
 const images = document.querySelectorAll('.hero-images img');
 setInterval(() => {
   images.forEach((img, index) => {
-      img.style.opacity = index === currentImageIndex ? '1' : '0';
+    img.style.opacity = index === currentImageIndex ? '1' : '0';
   });
   currentImageIndex = (currentImageIndex + 1) % images.length;
 }, 3000);
 
-// Generate Gallery Images with JavaScript
+// Gallery Generation
 const galleryData = [
   { src: 'gallery1.jpg', name: 'Artwork 1', year: '2021' },
   { src: 'gallery2.jpg', name: 'Artwork 2', year: '2020' },
@@ -49,20 +40,20 @@ const galleryData = [
 function loadGallery() {
   const galleryGrid = document.getElementById('gallery-grid');
   galleryData.forEach(item => {
-      const galleryItem = document.createElement('div');
-      galleryItem.classList.add('gallery-item');
+    const galleryItem = document.createElement('div');
+    galleryItem.classList.add('gallery-item');
 
-      const img = document.createElement('img');
-      img.src = item.src;
-      img.alt = item.name;
-      img.loading = "lazy";
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.name;
+    img.loading = "lazy";
 
-      const caption = document.createElement('p');
-      caption.textContent = `${item.name} (${item.year})`;
+    const caption = document.createElement('p');
+    caption.textContent = `${item.name} (${item.year})`;
 
-      galleryItem.appendChild(img);
-      galleryItem.appendChild(caption);
-      galleryGrid.appendChild(galleryItem);
+    galleryItem.appendChild(img);
+    galleryItem.appendChild(caption);
+    galleryGrid.appendChild(galleryItem);
   });
 }
 

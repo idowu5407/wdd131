@@ -1,5 +1,4 @@
-
-/* Basic Reset */
+* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,57 +6,55 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
-header { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    padding: 2rem; 
-    justify-content: space-between;
-    background-color: #35424a; 
-} 
-
-header h1 { 
-    margin: 0; 
-    color: #25D366;
-} 
-.header-log { 
-    display: flex; 
-    width: 100%; 
-    justify-content: space-between; 
-    align-items: center; 
-} 
-nav { display: flex; 
-    justify-content: center; 
-    margin-top: 10px; 
-} 
-nav a { 
-    margin: 0 1rem; 
-    text-decoration: none; 
-    color: #ffffff; 
-    transition: color 0.3s; 
-} 
-nav a:hover { 
-    color: #25D366; 
-    font-weight: bold; 
-} 
-.header-icons { 
-        display: flex; 
-        align-items: center; 
-        gap: 10px; 
+/* Header Styling */
+header {
+    background-color: #35424a;
+    padding: 1rem;
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    color: #25D366;
+    margin-left: 10px;
+}
+
+nav.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #25D366;
+    font-weight: bold;
+}
+
+/* Hamburger Styling */
 .hamburger {
     display: none;
-    font-size: 2em;
-    background-color: transparent;
+    font-size: 1.5em;
+    background: transparent;
     border: none;
     color: white;
-    position: absolute;
-    right: 20px;
-    top: 15px;
     cursor: pointer;
 }
 .hero {
@@ -150,20 +147,28 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .header-top { 
-        flex-direction: row; 
-    } nav { 
-        display: none; 
-        flex-direction: column; 
-    } 
-    h1 {
-        font-size: larger;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
     }
-    nav a { 
-        margin: 1rem 0; 
+    .header-container { 
+        flex-direction: row; 
     } 
+    .nav-links.active {
+        display: flex;
+    }
+    
+    h1 {
+        font-size: 1.2rem;
+    }
+    
+    
     .hamburger { 
         display: block; 
     } 
+    .header-container {
+        justify-content: space-around;
+    }
     
 }
