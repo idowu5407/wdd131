@@ -1,4 +1,4 @@
-* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -95,7 +95,7 @@ nav a:hover {
 
 .hero-text h2 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 30px;
 }
 
 .vision-mission, .gallery, .newsletter {
@@ -118,7 +118,6 @@ nav a:hover {
 .gallery img {
     width: auto;
     height: 200px;
-    box-shadow: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     
 }
@@ -129,7 +128,8 @@ nav a:hover {
 }
 
 .gallery h3 {
-    font-size: 3rem;
+    font-size: 50px;
+    margin: 10px;
 }
 .newsletter form input {
     margin: 0.5rem;
