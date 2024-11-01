@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Lord Art | Contact Page</title>
+    <meta name="description" content="Contact Us Page | Contact us for inquiries, art purchase, and submission of artpiece">
+    <meta name="author" content="Idowu Sunday">
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="scripts/project.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/ala (1).jpg" alt="Alart Logo">
+            </div>
+            <h1>AMAZING LORD ART</h1>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>  
+        </div>
+        <nav class="nav-links">
+            <a href="project.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="contact-us.html">Contact</a>
+        </nav> 
+    </header>
+    <main>
+        <section class="contact-info">
+            <h1>Contact Information</h1>
+            <address>
+                <p>No. 60 Surulere Eleja Sagamu, Ogun State</p>
+                <p>Phone:+2348166965407</p>
+                <p>Email: https//:www.juniormicheal25@gmail.com</p>
+            </address>
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.414951945505!2d3.6393960737320827!3d6.840754019397934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bdb952c7520cf%3A0x24657b87dda15558!2s60%20Eleja%20St%2C%20Sagamu%20121102%2C%20Ogun%20State!5e0!3m2!1sen!2sng!4v1721306715044!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="board-profiles">
+            <h2>Meet Our Board</h2>
+            <figure>
+                <img src="images/profile.jpg" alt="ceo">
+                <figcaption>Idowu Sunday - CEO</figcaption>
+            </figure>
+            <figure>
+                <img src="images/seyi.jpg" alt="Employee 2">
+                <figcaption>Oluwaseyi Anthony- Manager</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bunmi.PNG" alt="Curator">
+                <figcaption>Adewunmi Bunmi - Instructor</figcaption>
+            </figure>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of Message:</legend>                   
+                    <input type="radio" id="general-inquiry" name="purpose" value="General-Inquiry" required>
+                    <label for="general-inquiry">General-Inquiry</label><br>
+                    <input type="radio" id="reservation-question" name="purpose" value="Reservation Question"><br>
+                    <label for="reservation-question">Reservation Question</label><br>                    
+                    <input type="radio" id="Website-Suggestion" name="purpose" value="Website Suggestion">
+                    <label for="Website-Suggestion">Website Suggestion</label>
+                </fieldset>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="newsletter"> 
+                    <h3>Please subscribe to the monthly newsletter</h3>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main> 
+    <footer>
+        <div class="copyright">
+            <p>&copy; <span id="currentyear">2024</span>🌴Idowu Sunday | Ogun State | Nigeria</p>
+            <p id="lastModified"></p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/junior-hiidee25-2081649091897273/">
+                <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/Sunday_idowu22">
+                <img src="images/instagram_logo.png" alt="Instagram">
+            </a>
+            <a href="https://www.twitter.com/hiidee25">
+                <img src="images/twitter_logo.png" alt="Twitter">
+            </a>
+        </div>
+    </footer>  
+</body>
+</html>
